@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/31d17ca90e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./toggle.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+            rel="stylesheet"
+        />
+        <title>Nintendo - Official Site</title>
+        <style>
+            body {
+                font-family: Poppins;
+            }
+            svg,
+            img,
+            li {
+                cursor: pointer;
+            }
+            li:hover {
+                text-decoration: underline;
+                color: red;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-200 flex flex-col justify-between h-screen">
+        <!-- nav -->
+        <nav
+            style="background: linear-gradient(90deg, #ffffff 0%, #d5dae2 100%)"
+            class="mx-auto flex fixed w-full flex-col text-gray-800 border-b"
+        >
+            <!-- top -->
+            <div class="flex items-center justify-between">
+                <div style="min-width: 112px" class="bg-pink-400 md:bg-red-600 p-4 lg:px-6">
+                    <img
+                        style="filter: invert(100%)"
+                        class="w-20 lg:w-40"
+                        src="./imgs/nintendo.png"
+                        alt=""
+                    />
+                </div>
+                <div class="hidden md:block w-full ml-8">
+                    <div class="relative">
+                        <input
+                            type="search"
+                            placeholder="Search games, systems, support, etc."
+                            class="bg-transparent border-b border-black md:w-10/12 w-9/12 text-sm pl-6 placeholder-gray-700 outline-none"
+                        />
+                        <i
+                            style="left: 0; top: 50%; transform: translateY(-50%)"
+                            class="fa fa-search absolute"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6 pr-6 text-sm font-semibold lg:px-6">
+                    <div
+                        class="hidden lg:flex space-x-2 items-center hover:text-red-600 cursor-pointer"
+                    >
+                        <div class="text-xl">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        </div>
+                        <span>Support</span>
+                    </div>
+                    <div
+                        class="hidden lg:flex space-x-2 items-center hover:text-red-600 cursor-pointer"
+                    >
+                        <div class="text-xl">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <span class="whitespace-no-wrap">Wish List</span>
+                    </div>
+                    <div
+                        class="flex items-center space-x-2 whitespace-no-wrap hover:text-red-600 cursor-pointer"
+                    >
+                        <div class="text-lg">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                        <span class=" "
+                            >Log in <span class="hidden md:inline">/ Sign up</span></span
+                        >
+                    </div>
+                    <!-- hamburger stuff -->
+                    <nav role="navigation" class="md:hidden">
+                        <div id="menuToggle">
+                            <input type="checkbox" />
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                            <!-- hamburger menu -->
+
+                            <ul id="menu" class="relative">
+                                <a href="#"
+                                    ><li
+                                        style="grid-template-columns: 24px 3fr 1fr; width: 240px"
+                                        class="grid items-center space-x-3"
+                                    >
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Search</div>
+                                    </li></a
+                                >
+                                <a href="#"
+                                    ><li
+                                        style="grid-template-columns: 24px 3fr 1fr; width: 240px"
+                                        class="grid items-center space-x-3"
+                                    >
+                                        <div class="flex items-center space-x-3">
+                                            <img
+                                                class="w-6 h-6 -ml-1"
+                                                src="./imgs/switch-trimmy.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div>Games</div>
+                                        <div class="ml-auto w-full">
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div></li
+                                ></a>
+                                <a href="#"
+                                    ><li
+                                        style="grid-template-columns: 24px 3fr 1fr; width: 240px"
+                                        class="grid items-center space-x-3"
+                                    >
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fa fa-microchip" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Hardware</div>
+                                        <div class="ml-auto w-full">
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div></li
+                                ></a>
+                                <a href="#"
+                                    ><li
+                                        style="grid-template-columns: 24px 3fr 1fr; width: 240px"
+                                        class="grid items-center space-x-3"
+                                    >
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fas fa-newspaper"></i>
+                                        </div>
+                                        <div>News & Events</div>
+                                    </li></a
+                                >
+                                <a href="#"
+                                    ><li
+                                        style="grid-template-columns: 24px 3fr 1fr; width: 240px"
+                                        class="grid items-center space-x-3"
+                                    >
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Play Nintendo</div>
+                                    </li></a
+                                >
+                                <a href="#"
+                                    ><li
+                                        style="grid-template-columns: 24px 3fr 1fr; width: 240px"
+                                        class="grid items-center space-x-3"
+                                    >
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Holiday Gift Guide</div>
+                                    </li></a
+                                >
+                                <hr>
+                                <li
+                                        style="grid-template-columns: 24px 3fr 1fr; width: 240px"
+                                        class="grid items-center space-x-3"
+                                    >
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Wish List</div>
+                                    </li>
+                                <li
+                                        style="grid-template-columns: 24px 3fr 1fr; width: 240px"
+                                        class="grid items-center space-x-3"
+                                    >
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fa fa-question" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Support</div>
+                                    </li>
+                                <li
+                                        style="grid-template-columns: 24px 3fr 1fr; width: 240px"
+                                        class="grid items-center space-x-3"
+                                    >
+                                        <div class="flex items-center space-x-3">
+                                            <img src="./imgs/us-flag.svg" alt="" class="-ml-1 w-8">
+                                        </div>
+                                        <div>Change Region</div>
+                                    </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- bottom -->
+            <div style="left: 3rem" class="hidden md:block pl-3 xl:pl-12 absolute bottom-0">
+                <img class="w-12 md:w-16" src="./imgs/mario-fg.png" alt="" />
+            </div>
+            <div style="left: 3rem" class="md:hidden block pl-12 absolute bottom-0">
+                <img class="w-12 md:w-16" src="./imgs/Kirby_B_character.png" alt="" />
+            </div>
+            <div class="relative hidden md:flex space-x-6 mx-auto text-sm font-semibold py-2">
+                <div class="flex items-center justify-center hover:text-red-600 cursor-pointer">
+                    <div class="text-xl">
+                        <img class="w-10" src="./imgs/switch.png" alt="" />
+                    </div>
+                    <span>Games</span>
+                    <div class="text-sm ml-2">
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center justify-center space-x-2 hover:text-red-600 cursor-pointer"
+                >
+                    <div class="text-xl">
+                        <i class="fa fa-microchip" aria-hidden="true"></i>
+                    </div>
+                    <span>Hardware</span>
+                    <div class="text-sm">
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center justify-center space-x-2 hover:text-red-600 cursor-pointer"
+                >
+                    <div class="text-xl">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <span class="whitespace-no-wrap">News & Events</span>
+                </div>
+                <div
+                    class="flex items-center justify-center space-x-2 hover:text-red-600 cursor-pointer"
+                >
+                    <div class="text-xl">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <span class="whitespace-no-wrap">Play Nintendo</span>
+                </div>
+                <div
+                    class="flex items-center justify-center space-x-2 hover:text-red-600 cursor-pointer"
+                >
+                    <div class="text-xl">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <span class="whitespace-no-wrap">Holiday Gift Guide</span>
+                </div>
+            </div>
+        </nav>
+        <!-- hero -->
+        <div class="border-b pb-2 mt-12">
+            <img class="sm:hidden object-cover w-full" src="./imgs/hero-sm.jpg" alt="" />
+            <img
+                style="max-width: 1466px"
+                class="mx-auto object-cover w-full mt-12 hidden sm:block"
+                src="https://www.nintendo.com/content/dam/noa/en_US/merchandising/center-stage-banner/hyrule-warriors-age-of-calamity/1366x493_centerstage_HWAOC_V2.jpg"
+                alt=""
+                class="sm:block"
+            />
+            <div class="flex space-x-8 items-center justify-center pt-8 pb-6 font-semibold items-center">
+                <h1 class="text-xl text-gray-800">Available now</h1>
+                <button class="bg-red-600 px-4 py-2 text-white rounded flex space-x-2">
+                    <span>Visit site </span>
+                    <div><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                </button>
+                <div class="pl-4 space-x-3 items-center hidden md:flex">
+                    <img
+                        src="https://code.nintendo.com/web-components/esrb-rating/assets/en-t.svg"
+                        alt=""
+                    />
+                    <span class="text-xs text-gray-600">Fantasy Violence</span>
+                </div>
+            </div>
+        </div>
+        <!-- switch row -->
+        <div>
+            <img src="./imgs/explore-switch-x2-.jpg" alt="">
+        </div>
+        <!-- footer -->
+        <footer class="mb-20 mt-auto w-full text-white">
+            <!-- about nintendo -->
+            <div class="md:hidden text-blue-700">
+                <!-- about -->
+                <div class="flex flex-col border-b items-center justify-between px-4 text-2xl">
+                    <div class="flex justify-between py-4 w-full">
+                        <h1 class="">About Nintendo</h1>
+                        <div id="about-down" class="cursor-pointer">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div
+                        id="about-drop"
+                        class="hidden flex py-2 items-start w-full bg-gray-200 text-gray-800 font-light text-xl border-t"
+                    >
+                        <ul class="flex flex-col space-y-4">
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Company Info
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Careers
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                CSR Report
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Sitemap
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- where -->
+                <div class="flex flex-col border-b items-center justify-between px-4 text-2xl">
+                    <div class="flex justify-between py-4 w-full">
+                        <h1 class="">Where To Buy</h1>
+                        <div id="where-down" class="cursor-pointer">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div
+                        id="where-drop"
+                        class="hidden flex py-2 items-start w-full bg-gray-200 text-gray-800 font-light text-xl border-t"
+                    >
+                        <ul class="flex flex-col space-y-4">
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Company Info
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Careers
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                CSR Report
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Sitemap
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- support -->
+                <div class="flex flex-col border-b items-center justify-between px-4 text-2xl">
+                    <div class="flex justify-between py-4 w-full">
+                        <h1 class="">Support</h1>
+                        <div id="support-down" class="cursor-pointer">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div
+                        id="support-drop"
+                        class="hidden flex py-2 items-start w-full bg-gray-200 text-gray-800 font-light text-xl border-t"
+                    >
+                        <ul class="flex flex-col space-y-4">
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Company Info
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Careers
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                CSR Report
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Sitemap
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- parents -->
+                <div class="flex flex-col border-b items-center justify-between px-4 text-2xl">
+                    <div class="flex justify-between py-4 w-full">
+                        <h1 class="">Parents</h1>
+                        <div id="parents-down" class="cursor-pointer">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div
+                        id="parents-drop"
+                        class="hidden flex py-2 items-start w-full bg-gray-200 text-gray-800 font-light text-xl border-t"
+                    >
+                        <ul class="flex flex-col space-y-4">
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Company Info
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Careers
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                CSR Report
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Sitemap
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- legal -->
+                <div class="flex flex-col border-b items-center justify-between px-4 text-2xl">
+                    <div class="flex justify-between py-4 w-full">
+                        <h1 class="">Legal</h1>
+                        <div id="legal-down" class="cursor-pointer">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div
+                        id="legal-drop"
+                        class="hidden flex py-2 items-start w-full bg-gray-200 text-gray-800 font-light text-xl border-t"
+                    >
+                        <ul class="flex flex-col space-y-4">
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Company Info
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Careers
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                CSR Report
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Sitemap
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- privacy -->
+                <div class="flex flex-col border-b items-center justify-between px-4 text-2xl">
+                    <div class="flex justify-between py-4 w-full">
+                        <h1 class="">Privacy</h1>
+                        <div id="privacy-down" class="cursor-pointer">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div
+                        id="privacy-drop"
+                        class="hidden flex py-2 items-start w-full bg-gray-200 text-gray-800 font-light text-xl border-t"
+                    >
+                        <ul class="flex flex-col space-y-4">
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Company Info
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Careers
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                CSR Report
+                            </li>
+                            <li class="hover:underline hover:text-blue-600 cursor-pointer">
+                                Sitemap
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- change -->
+                <div class="flex items-center space-x-3 p-4 text-2xl border-b">
+                    <h1 class="capitalize">Change Region</h1>
+                    <img class="w-6" src="./imgs/us-flag.svg" alt="" />
+                </div>
+            </div>
+            <div
+                class="hidden md:flex flex-wrap items-center justify-center text-gray-800 gap-y-6 py-4 wrap w-12/12"
+            >
+                <div
+                    class="grid grid-cols-3 gap-x-32 xl:gap-x-64 justify-between items-center w-auto"
+                >
+                    <div class="w-40">
+                        <ul class="text-sm">
+                            <li class="font-semibold text-lg whitespace-no-wrap">About Nintendo</li>
+                            <li class="mt-3">Company Info</li>
+                            <li class="mt-2">Careers</li>
+                            <li class="mt-2">CSR Report</li>
+                            <li class="mt-2">Sitemap</li>
+                        </ul>
+                    </div>
+                    <div class="w-40">
+                        <ul class="text-sm">
+                            <li class="font-semibold text-lg">Where To Buy</li>
+                            <li class="mt-3">Company Info</li>
+                            <li class="mt-2">Careers</li>
+                            <li class="mt-2">CSR Report</li>
+                            <li class="mt-2">Sitemap</li>
+                        </ul>
+                    </div>
+                    <div class="w-40">
+                        <ul class="text-sm">
+                            <li class="font-semibold text-lg">Support</li>
+                            <li class="mt-3">Company Info</li>
+                            <li class="mt-2">Careers</li>
+                            <li class="mt-2">CSR Report</li>
+                            <li class="mt-2">Sitemap</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="grid grid-cols-3 gap-x-32 xl:gap-x-64 justify-between items-center w-auto"
+                >
+                    <div class="w-40">
+                        <ul class="text-sm">
+                            <li class="font-semibold text-lg whitespace-no-wrap">Parents</li>
+                            <li class="mt-3">Company Info</li>
+                            <li class="mt-2">Careers</li>
+                            <li class="mt-2">CSR Report</li>
+                            <li class="mt-2">Sitemap</li>
+                        </ul>
+                    </div>
+                    <div class="w-40">
+                        <ul class="text-sm">
+                            <li class="font-semibold text-lg">Legal</li>
+                            <li class="mt-3">Company Info</li>
+                            <li class="mt-2">Careers</li>
+                            <li class="mt-2">CSR Report</li>
+                            <li class="mt-2">Sitemap</li>
+                        </ul>
+                    </div>
+                    <div class="w-40">
+                        <ul class="text-sm">
+                            <li class="font-semibold text-lg">Privacy</li>
+                            <li class="mt-3">Company Info</li>
+                            <li class="mt-2">Careers</li>
+                            <li class="mt-2">CSR Report</li>
+                            <li class="mt-2">Sitemap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- contact us -->
+            <div class="bg-gray-800 flex flex-col py-4 mb-20 md:mb-0">
+                <div class="mx-auto mt-4 flex flex-col space-y-4">
+                    <div class="flex space-x-3">
+                        <span class="hover:underline cursor-pointer">Contact Us</span>
+                        <span class="hover:underline cursor-pointer">Website Feedback</span>
+                    </div>
+                    <div class="text-3xl flex justify-between">
+                        <i class="fa fa-facebook cursor-pointer" aria-hidden="true"></i>
+                        <i class="fa fa-twitter cursor-pointer" aria-hidden="true"></i>
+                        <i class="fa fa-instagram cursor-pointer" aria-hidden="true"></i>
+                        <i class="fa fa-youtube cursor-pointer" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="mt-6 flex flex-col w-full mb-4">
+                    <div class="mx-auto">
+                        <img class="w-16" src="./imgs/esrb.png" alt="" />
+                    </div>
+                    <p class="text-xs mt-6 text-center px-1">
+                        © 2020 SuperVision Design for Nintendo. Games are property of their
+                        respective owners. Nintendo of America Inc. Headquarters are in Redmond,
+                        Washington
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- bottombar -->
+        <section
+            class="fixed md:hidden bottom-0 left-0 right-0 bg-gray-100 p-3 grid grid-cols-5 items-center justify-between gap-1 text-xs border-t"
+        >
+            <div class="flex flex-col items-center">
+                <div class="text-xl">
+                    <img class="w-10" src="./imgs/switch.png" alt="" />
+                </div>
+                <span>Games</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="text-xl">
+                    <i class="fa fa-microchip" aria-hidden="true"></i>
+                </div>
+                <span>Hardware</span>
+            </div>
+            <div class="flex flex-col items-center pb-4">
+                <div
+                    class="text-2xl bg-red-600 text-white rounded-full h-12 w-12 flex items-center justify-center"
+                >
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="text-xl">
+                    <i class="fa fa-tag" aria-hidden="true"></i>
+                </div>
+                <span>Deals</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="text-xl">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <span>News</span>
+            </div>
+        </section>
+        <script src="./app.js"></script>
+    </body>
+</html>
